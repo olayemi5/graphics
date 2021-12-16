@@ -29,6 +29,7 @@ namespace Shapes
             Brush whiteBrush = new SolidBrush(Color.WhiteSmoke);  //will paint the interior
             Brush yellowBrush = new SolidBrush(Color.Yellow);  //will paint the interior
             Brush yelloGreen = new SolidBrush(Color.YellowGreen);  //will paint the interior
+            Brush blackBrush = new SolidBrush(Color.Black);  //will paint the interior
             Brush brownBrush = new SolidBrush(Color.SandyBrown);  //will paint the interior
 
             //draw background color
@@ -121,7 +122,11 @@ namespace Shapes
             g.FillRectangle(redBrush,180,258,700,258);
 
             //windows
-            g.FillRectangle(whiteBrush, 230, 308,150, 70);
+            g.FillRectangle(whiteBrush, 200, 308,150, 70);
+            g.FillRectangle(whiteBrush, 710, 308,150, 70);
+
+            //door
+            g.FillRectangle(blackBrush, 435, 308, 200, 208);
         }
     }
 }
