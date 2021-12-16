@@ -16,7 +16,7 @@ namespace Shapes
         {
             InitializeComponent();
             Width = 1030;
-            Height = 545;
+            Height = 645;
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -24,13 +24,16 @@ namespace Shapes
             Graphics g = e.Graphics;
             Pen myPen = new Pen(Color.Black);    //will paint the exterior
             Brush blueBrush = new SolidBrush(Color.CornflowerBlue);  //will paint the interior
+            Brush redBrush = new SolidBrush(Color.Red);  //will paint the interior
             Brush greenBrush = new SolidBrush(Color.Green);  //will paint the interior
+            Brush whiteBrush = new SolidBrush(Color.WhiteSmoke);  //will paint the interior
             Brush yellowBrush = new SolidBrush(Color.Yellow);  //will paint the interior
             Brush yelloGreen = new SolidBrush(Color.YellowGreen);  //will paint the interior
+            Brush brownBrush = new SolidBrush(Color.SandyBrown);  //will paint the interior
 
             //draw background color
-            Rectangle topRectangle = new Rectangle(5, 0, 1000, 400);
-            Rectangle bottomRectangle = new Rectangle(5, 400, 1000, 100);
+            Rectangle topRectangle = new Rectangle(5, 0, 1000, 500);
+            Rectangle bottomRectangle = new Rectangle(5, 500, 1000, 100);
 
             g.FillRectangle(blueBrush, topRectangle);
             g.FillRectangle(greenBrush, bottomRectangle);
@@ -102,6 +105,23 @@ namespace Shapes
             Point[] curvePointSe = { point1Se, point2Se, point3Se };
             // Draw polygon to screen.
             g.FillPolygon(yellowBrush, curvePointSe);
+
+
+
+            //draw house 
+
+            Point point1R = new Point(530, 90);
+            Point point2R = new Point(900, 258);
+            Point point3R = new Point(160, 258);
+            Point[] curvePointR = { point1R, point2R, point3R };
+            // Draw polygon to screen.
+            g.FillPolygon(brownBrush, curvePointR);
+
+            //recatngle  body
+            g.FillRectangle(redBrush,180,258,700,258);
+
+            //windows
+            g.FillRectangle(whiteBrush, 230, 308,150, 70);
         }
     }
 }
