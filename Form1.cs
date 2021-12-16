@@ -87,13 +87,21 @@ namespace Shapes
             // Draw polygon to screen.
             g.FillPolygon(yellowBrush, curvePointsFi);
 
-            //fifth sun point
+            //sixth sun point
             Point point1Si = new Point(925, 30);
             Point point2Si = new Point(935, 85);
             Point point3Si = new Point(915, 85);
             Point[] curvePointSi = { point1Si, point2Si, point3Si };
             // Draw polygon to screen.
             g.FillPolygon(yellowBrush, curvePointSi);
+
+            //seventh sun point
+            Point point1Se = new Point(925, 200);
+            Point point2Se = new Point(935, 128);
+            Point point3Se = new Point(915, 128);
+            Point[] curvePointSe = { point1Se, point2Se, point3Se };
+            // Draw polygon to screen.
+            g.FillPolygon(yellowBrush, curvePointSe);
         }
     }
 }
