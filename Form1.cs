@@ -107,14 +107,12 @@ namespace Shapes
             // Draw polygon to screen.
             g.FillPolygon(yellowBrush, curvePointSe);
 
-
-
             //draw house 
-
             Point point1R = new Point(530, 90);
             Point point2R = new Point(900, 258);
             Point point3R = new Point(160, 258);
             Point[] curvePointR = { point1R, point2R, point3R };
+
             // Draw polygon to screen.
             g.FillPolygon(brownBrush, curvePointR);
 
